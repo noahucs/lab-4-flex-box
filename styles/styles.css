@@ -2,76 +2,72 @@ body {
   font-family: Arial;
 }
 
-p {
-  margin: 0;
-  padding: 20px;
-  text-align: center;
+.container {
+  display: flex;
+  background-color: lightblue;
+}
+
+.box {
+  background-color: grey;
+  height: 50px;
 }
 
 /*Two coloumns */
 .two-columns {
-  display: flex;
   gap: 10px;
   padding: 10px;
 }
 
-.two-columns p {
+.two-columns .box {
   flex: 1;
-  background-color: grey;
 }
 
 /*Three equal columns */
 .three-equal-columns {
-  display: flex;
   gap: 15px;
   padding: 15px;
 }
 
-.three-equal-columns p {
+.three-equal-columns .box {
   flex: 1;
-  background-color: grey;
 }
 
 /*Three unequal columns  */
 .three-unequal-columns {
-  display: 12px;
   gap: 12px;
   padding: 12px;
 }
 
-.three-unequal-columns p {
-  border: 2px lightblue;
-  background-color: grey;
+.three-unequal-columns .box {
+  flex: 1;
+  border: 2px solid lightblue;
+  box-sizing: border-box;
 }
 
 /*The first box (double the width)  */
-.three-unequal-columns p:first-child {
+.three-unequal-columns .double {
   flex: 2;
-}
-
-/*all other box that isnt the first -> normal width */
-.three-unequal-columns p:not(:first-child) {
-  flex: 1;
 }
 
 /*Four equal columns and a footer */
 
 .four-columns {
   display: flex;
+  flex-wrap: wrap;
   margin: 12px;
   padding: 12px;
 }
 
-.four-columns p {
-  flex: 1;
-  border: 2px lightblue;
-  background-color: grey;
+.four-columns .box {
+  flex: 1 1 0;
+  border: 2px solid lightblue;
+  box-sizing: border-box;
 }
 
 .footer {
-  margin: 12px;
-  padding: 20px;
-  border: 2px lightblue;
+  flex: 100%;
   background-color: grey;
-  text-align: center;
+  height: 50px;
+  border: 2px solid lightblue;
+  box-sizing: border-box;
 }
